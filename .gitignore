@@ -1,0 +1,5 @@
+target
+app/target
+app/node_modules
+.diff
+.vscode

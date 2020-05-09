@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>My awesome Yew with Yew-Router and warp serve</title>
+    <link href="node_modules/yew-styles/main.css" rel="stylesheet">
+    <link href="pkg/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <script type="module">
+      import init, { run } from './pkg/yew_parcel.js';
+
+      const start = async() => {
+        await init();
+        run();
+      };
+
+      start();
+    </script>
+    <script>
+      const messages = [];
+
+      const connect = () => {
+        const reloadSocket = new WebSocket("ws://127.0.0.1:3000");
+
+        reloadSocket.onopen = (event) => {
+          reloadSocket.send("Browser ready");
+        }
+
+        reloadSocket.onmessage = (event) => {
+          messages.push(event.data);
+          if(event.data === "reload" && messages.length > 1) {
+            window.location.reload();
+          }
+        };
+
+        reloadSocket.onclose = (e) => {
+          console.log('Socket is closed. Reconnect will be attempted in 1 second.', e.reason);
+          setTimeout(() => {
+            connect();
+          }, 300);
+        };
+
+        reloadSocket.onerror = (error) => {
+          console.error(`error: ${error}`);
+          reloadSocket.close();
+        }
+      }
+      
+      connect();
+    </script>
+  </body>
+</html>

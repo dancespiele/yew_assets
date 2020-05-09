@@ -1,0 +1,14 @@
+{
+  "name": "yew-warp-render",
+  "version": "0.1.0",
+  "description": "yew warp template",
+  "main": "rollup.config.js",
+  "scripts": {
+    "start": "rollup -c"
+  },
+  "author": "Francisco Jesus Navarro Cortes",
+  "license": "MIT",
+  "dependencies": {
+    "yew-styles": "^0.2.0"
+  }
+}

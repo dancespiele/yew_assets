@@ -1,0 +1,17 @@
+[package]
+name = "yew-warp-render"
+version = "0.1.0"
+authors = ["spieljs <spieljs@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "0.2", features = ["macros", "process", "rt-threaded","sync", "tcp", "fs", "dns"] }
+warp = "0.2"
+log = "0.4"
+pretty_env_logger = "0.4"
+hyper="0.13"
+futures="0.3"
+spielrs_diff = "0.1"
+dotenv = "0.15"
