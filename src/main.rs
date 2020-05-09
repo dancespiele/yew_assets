@@ -163,6 +163,6 @@ async fn watch(tx: mpsc::UnboundedSender<Result<Message, Error>>) {
                 .unwrap();
         }
 
-        delay_for(Duration::from_millis(500)).await;
+        delay_for(Duration::from_millis(2000)).await;
     }
 }
