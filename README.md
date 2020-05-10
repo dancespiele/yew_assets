@@ -1,4 +1,4 @@
-# WASM WARP TEMPLATE
+# Wasm Warp Template
 
 Wasm Warp Template is a minimal template to run rustwasm projects. The templete use [yew](https://yew.rs)
 as frontend with wasm and [warp](https://github.com/seanmonstar/warp) as server and watcher.
