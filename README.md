@@ -83,7 +83,7 @@ let websocket_srv = Server::bind(&([127, 0, 0, 1], 3000).into()).serve(make_webs
 
 * For now the server only watch the folder `src` but soon will be available to watch all the wasm source
 less target folder (no necessary to watch it), for it requires to add feature to skip folder in the diff
-in the library [spielrs_diff](https://github.com/spielrs/spielrs-diff)
+of the library [spielrs_diff](https://github.com/spielrs/spielrs-diff)
 
 ## Roadmap
 
