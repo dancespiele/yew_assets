@@ -31,10 +31,10 @@ If you need to include css file, it has to be inside of the `pkg`
 
 for assets has to be included in `assets`
 
-2. Run the template:
+2.Run the template:
 
-without logs: `cargo run`
-with logs: `RUST_LOG=name_of_your_project_from_Cargo.toml=trace cargo run` 
+- without logs: `cargo run`
+- with logs: `RUST_LOG=name_of_your_project_from_Cargo.toml=trace cargo run` 
 
 **Note**: By the default the name is wasm_warp_template
 
