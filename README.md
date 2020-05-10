@@ -92,3 +92,7 @@ of the library [spielrs_diff](https://github.com/spielrs/spielrs-diff)
 - [ ] Open a browser after start running the server
 - [ ] Avoid duplicate message in sockect connection
 - [ ] Implement spielrs which will be based in [parceljs](https://en.parceljs.org/) but focus in rustwasm projects
+
+## License
+
+Wasm Warp Template is MIT licensed. See [license](LICENSE)
