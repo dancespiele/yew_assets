@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-    <title>My awesome Yew with Yew-Router and warp serve</title>
+    <title>My awesome wasm template with warp server</title>
     <link href="node_modules/yew-styles/main.css" rel="stylesheet">
     <link href="pkg/app.css" rel="stylesheet">
   </head>
   <body>
     <script type="module">
-      import init, { run } from './pkg/yew_parcel.js';
+      import init, { run } from './pkg/wasm_warp_template.js';
 
       const start = async() => {
         await init();
@@ -24,7 +24,7 @@
         const reloadSocket = new WebSocket("ws://127.0.0.1:3000");
 
         reloadSocket.onopen = (event) => {
-          reloadSocket.send("Browser ready");
+          reloadSocket.send(`${navigator.userAgent} connected`);
         }
 
         reloadSocket.onmessage = (event) => {

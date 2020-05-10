@@ -3,7 +3,10 @@ extern crate pretty_env_logger;
 extern crate log;
 
 use dotenv::dotenv;
-use futures::{future::join, FutureExt, SinkExt, StreamExt};
+use futures::{
+    future::{abortable, join, AbortHandle},
+    FutureExt, SinkExt, StreamExt,
+};
 use hyper::server::Server;
 use hyper::service::make_service_fn;
 use spielrs_diff::dir_diff;
@@ -136,7 +139,10 @@ async fn connect(ws: WebSocket) {
 
 async fn watch(tx: mpsc::UnboundedSender<Result<Message, Error>>) {
     let wasm_path = get_wasm_path();
+    let mut process: Vec<AbortHandle> = vec![];
     loop {
+        let tx = tx.clone();
+        let wasm_path = wasm_path.clone();
         match fs::read_dir(".diff").await {
             Ok(_file) => (),
             Err(_e) => {
@@ -152,17 +158,28 @@ async fn watch(tx: mpsc::UnboundedSender<Result<Message, Error>>) {
         let diff = dir_diff(format!("{}/src", wasm_path), ".diff".to_string()).await;
 
         if diff {
-            info!("sources change");
-            build_wasm().await.unwrap();
-            tx.send(Ok(Message::text("reload"))).unwrap();
-            Command::new("rm")
-                .arg("-R")
-                .arg(".diff")
-                .output()
-                .await
-                .unwrap();
-        }
+            for p in process.clone() {
+                p.abort();
+                process.pop();
+            }
 
+            let tx = tx.clone();
+            let (fut, handle) = abortable(async move {
+                info!("sources change");
+                build_wasm().await.unwrap();
+                tx.send(Ok(Message::text("reload"))).unwrap();
+                Command::new("rm")
+                    .arg("-R")
+                    .arg(".diff")
+                    .output()
+                    .await
+                    .unwrap();
+            });
+
+            process.push(handle);
+
+            fut.await.unwrap();
+        }
         delay_for(Duration::from_millis(2000)).await;
     }
 }

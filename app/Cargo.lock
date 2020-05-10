@@ -799,6 +799,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "wasm_warp_template"
+version = "0.14.2"
+dependencies = [
+ "cfg-if",
+ "console_error_panic_hook",
+ "dotenv",
+ "failure",
+ "serde",
+ "serde_derive",
+ "wasm-bindgen",
+ "web-sys",
+ "wee_alloc",
+ "yew",
+ "yew-router",
+ "yew_styles",
+]
+
+[[package]]
 name = "web-sys"
 version = "0.3.39"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -898,24 +916,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
-]
-
-[[package]]
-name = "yew-parcel"
-version = "0.14.2"
-dependencies = [
- "cfg-if",
- "console_error_panic_hook",
- "dotenv",
- "failure",
- "serde",
- "serde_derive",
- "wasm-bindgen",
- "web-sys",
- "wee_alloc",
- "yew",
- "yew-router",
- "yew_styles",
 ]
 
 [[package]]

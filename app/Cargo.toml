@@ -1,11 +1,11 @@
 [package]
-authors = ["The RustWasm Developers"]
+authors = ["Francisco Jesus Navarro Cortes"]
 categories = ["wasm"]
 description = "My awesome Yew with Yew-Router and Parcel application!"
 license = "MIT"
-name = "yew-parcel"
+name = "wasm_warp_template"
 readme = "./README.md"
-repository = "https://github.com/spielrs/yew-parcel-template.git"
+repository = "https://github.com/spielrs/wasm_warp_template.git"
 version = "0.14.2"
 
 [lib]
