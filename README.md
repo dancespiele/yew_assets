@@ -22,7 +22,7 @@ as frontend with wasm and [warp](https://github.com/seanmonstar/warp) as server 
 </script>
 ```
 
-If you need to include css file or anothe assets, it has to be inside of the `static`
+If you need to include css file or another assets, it has to be inside of the `static`
 
 ```html
 <head>
@@ -46,7 +46,7 @@ You can set the server address, the path where are the wasm sources and the env 
 ```
 SERVER_ADRESS=[SERVER_ADDRESS]:[PORT] // by default is 127.0.0.1:8080
 WASM_PATH=[PATH WHERE ARE YOUR WASM SOURCES] // by default is `app`
-ENV_BUILD=production // skip this variable will build in development mode skipin the optimization
+ENV_BUILD=production // skiping this variable will build in development mode without the optimization
 ```
 
 **Note**: remember not include `/` in the end of the path
