@@ -45,7 +45,7 @@ impl Component for App {
                     navbar_type=Palette::Info
                     navbar_style=Style::Outline
                     fixed=Fixed::Top
-                    branch=html!{<img src="/assets/spielrs_logo.png"></img>}
+                    branch=html!{<img src="/static/spielrs_logo.png"></img>}
                 >
                     <NavbarContainer>
                             <RouterAnchor<AppRouter> classes="navbar-item" route=AppRouter::RootPath>{"Home"}</RouterAnchor<AppRouter>>

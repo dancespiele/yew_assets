@@ -22,15 +22,13 @@ as frontend with wasm and [warp](https://github.com/seanmonstar/warp) as server 
 </script>
 ```
 
-If you need to include css file, it has to be inside of the `pkg`
+If you need to include css file or anothe assets, it has to be inside of the `static`
 
 ```html
 <head>
-    <link href="pkg/app.css" rel="stylesheet">
+    <link href="static/app.css" rel="stylesheet">
 </head>
 ```
-
-for assets has to be included in `assets`
 
 2.Run the template:
 
@@ -43,24 +41,15 @@ Ready to start developing 🚀
 
 ## Customize running project
 
-You can set the server address and the path where are the wasm sources in your .env file:
+You can set the server address, the path where are the wasm sources and the env build in your .env file:
 
 ```
 SERVER_ADRESS=[SERVER_ADDRESS]:[PORT] // by default is 127.0.0.1:8080
 WASM_PATH=[PATH WHERE ARE YOUR WASM SOURCES] // by default is `app`
+ENV_BUILD=production // skip this variable will build in development mode skipin the optimization
 ```
 
 **Note**: remember not include `/` in the end of the path
-
-## Remove optimization
-
-You can remove wasm optimization, if you consider that it is slow, adding the next in the `Cargo.toml`
-of wasm source (by defaut `app/Cargo.toml`):
-
-```
-[package.metadata.wasm-pack.profile.release]
-wasm-opt = false
-```
 
 ## About WebSocket
 

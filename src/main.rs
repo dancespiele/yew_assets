@@ -27,12 +27,11 @@ use warp::{
 #[tokio::main(core_threads = 2)]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     pretty_env_logger::init();
-
-    let server_address: SocketAddr = get_server_address().parse().unwrap();
-
     dotenv().ok();
 
+    let server_address: SocketAddr = get_server_address().parse().unwrap();
     let wasm_path = get_wasm_path();
+
     build_wasm().await.unwrap();
 
     let websocket_routes = warp::ws().map(|ws: warp::ws::Ws| ws.on_upgrade(connect));
@@ -48,10 +47,10 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
 
     let index = warp::get().and(warp::fs::file(format!("{}/index.html", wasm_path)));
     let core = warp::path("pkg").and(warp::fs::dir(format!("{}/pkg", wasm_path)));
-    let assets = warp::path("assets").and(warp::fs::dir(format!("{}/assets", wasm_path)));
+    let static_files = warp::path("static").and(warp::fs::dir(format!("{}/static", wasm_path)));
     let node_modules =
         warp::path("node_modules").and(warp::fs::dir(format!("{}/node_modules", wasm_path)));
-    let routes = core.or(node_modules.or(assets.or(index)));
+    let routes = core.or(node_modules.or(static_files.or(index)));
     let svc = warp::service(routes);
     let make_svc = make_service_fn(|_: _| {
         let svc = svc.clone();
@@ -64,6 +63,18 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     let _ret = join(websocket_srv, srv).await;
 
     Ok(())
+}
+
+fn get_env_build() -> String {
+    if let Ok(env_build) = env::var("ENV_BUILD") {
+        if env_build == "production" {
+            "--release".to_string()
+        } else {
+            "--dev".to_string()
+        }
+    } else {
+        "--dev".to_string()
+    }
 }
 
 fn get_wasm_path() -> String {
@@ -83,10 +94,12 @@ fn get_server_address() -> String {
 }
 
 async fn build_wasm() -> Result<(), Box<dyn std::error::Error>> {
+    let env_build = get_env_build();
     let wasm_path = get_wasm_path();
     let mut cmd = Command::new("wasm-pack");
     let cmd = cmd
         .arg("build")
+        .arg(env_build)
         .args(&["--target", "web"])
         .current_dir(wasm_path);
 
