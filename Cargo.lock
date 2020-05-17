@@ -1375,7 +1375,7 @@ checksum = "cccddf32554fecc6acb585f82a32a72e28b48f8c4c1883ddfeeeaa96f7d8e519"
 
 [[package]]
 name = "wasm_warp_template"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "dotenv",
  "futures",

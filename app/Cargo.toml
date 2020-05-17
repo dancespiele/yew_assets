@@ -6,7 +6,7 @@ license = "MIT"
 name = "wasm_warp_template"
 readme = "./README.md"
 repository = "https://github.com/spielrs/wasm_warp_template.git"
-version = "0.14.2"
+version = "0.16.0"
 
 [lib]
 crate-type = ["cdylib"]
