@@ -77,8 +77,8 @@ This limitation will be resolved in [spielrs-diff](https://github.com/spielrs/sp
 
 ## Roadmap
 
-- [x] Customize watcher
 - [ ] Fix watcher limitation
+- [x] Customize watcher
 - [ ] Open a browser after start running the server
 - [ ] Avoid double reload after changes
 - [ ] Avoid duplicate message in sockect connection
