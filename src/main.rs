@@ -9,7 +9,7 @@ use futures::{
 };
 use hyper::server::Server;
 use hyper::service::make_service_fn;
-use spielrs_diff::dir_diff;
+use spielrs_diff::{diff::DirDiff, dir_diff};
 use std::env;
 use std::net::SocketAddr;
 use std::time::Duration;
@@ -63,6 +63,23 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     let _ret = join(websocket_srv, srv).await;
 
     Ok(())
+}
+
+fn get_excluding_paths() -> Vec<String> {
+    if let Ok(env_excluding_paths) = env::var("EXCLUDING_PATHS") {
+        env_excluding_paths
+            .split(' ')
+            .map(String::from)
+            .collect::<Vec<String>>()
+    } else {
+        vec![
+            "target".to_string(),
+            "pkg".to_string(),
+            "static".to_string(),
+            "node_modules".to_string(),
+            "Cargo.lock".to_string(),
+        ]
+    }
 }
 
 fn get_env_build() -> String {
@@ -152,6 +169,7 @@ async fn connect(ws: WebSocket) {
 
 async fn watch(tx: mpsc::UnboundedSender<Result<Message, Error>>) {
     let wasm_path = get_wasm_path();
+    let excluding_paths: Vec<String> = get_excluding_paths();
     let mut process: Vec<AbortHandle> = vec![];
     loop {
         let tx = tx.clone();
@@ -161,14 +179,20 @@ async fn watch(tx: mpsc::UnboundedSender<Result<Message, Error>>) {
             Err(_e) => {
                 Command::new("cp")
                     .arg("-R")
-                    .args(&[format!("{}/src", wasm_path), ".diff".to_string()])
+                    .args(&[wasm_path.clone(), ".diff".to_string()])
                     .output()
                     .await
                     .unwrap();
             }
         };
 
-        let diff = dir_diff(format!("{}/src", wasm_path), ".diff".to_string()).await;
+        let diff = dir_diff(DirDiff {
+            dir: wasm_path.clone(),
+            dir_comp: ".diff".to_string(),
+            excluding: Some(excluding_paths.clone()),
+            recursive_excluding: true,
+        })
+        .await;
 
         if diff {
             for p in process.clone() {
@@ -193,6 +217,6 @@ async fn watch(tx: mpsc::UnboundedSender<Result<Message, Error>>) {
 
             fut.await.unwrap();
         }
-        delay_for(Duration::from_millis(2000)).await;
+        delay_for(Duration::from_millis(1000)).await;
     }
 }

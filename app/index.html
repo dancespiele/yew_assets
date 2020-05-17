@@ -38,7 +38,7 @@
           console.log('Socket is closed. Reconnect will be attempted in 1 second.', e.reason);
           setTimeout(() => {
             connect();
-          }, 300);
+          }, 1000);
         };
 
         reloadSocket.onerror = (error) => {

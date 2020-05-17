@@ -47,9 +47,11 @@ You can set the server address, the path where are the wasm sources and the env 
 SERVER_ADRESS=[SERVER_ADDRESS]:[PORT] // by default is 127.0.0.1:8080
 WASM_PATH=[PATH WHERE ARE YOUR WASM SOURCES] // by default is `app`
 ENV_BUILD=production // skiping this variable will build in development mode without the optimization
+EXCLUDING_PATHS="target pkg node_modules static Cargo.lock .vscode" //exclude files or direcotory from the watch. By default target pkg node_modules static Cargo.lock
 ```
 
-**Note**: remember not include `/` in the end of the path
+**Note**: remember not include `/` in the end of the path. Exclude all the files which are not `utf-8` like images or binaries
+otherwise the watcher will crash
 
 ## About WebSocket
 
@@ -70,16 +72,17 @@ let websocket_srv = Server::bind(&([127, 0, 0, 1], 3000).into()).serve(make_webs
 
 ## Limitations
 
-* For now the server only watch the folder `src` but soon will be available to watch all the wasm source
-less target folder (no necessary to watch it), for it requires to add feature to skip folder in the diff
-of the library [spielrs_diff](https://github.com/spielrs/spielrs-diff)
+* The watcher only can read `utf-8` for now. It means that images or binaries for example will cause crash.
+This limitation will be resolved in [spielrs-diff](https://github.com/spielrs/spielrs-diff).
 
 ## Roadmap
 
-- [ ] Fix watcher limitation
-- [ ] Customize watcher
+- [x] Fix watcher limitation
+- [x] Customize watcher
 - [ ] Open a browser after start running the server
+- [ ] Avoid double reload after changes
 - [ ] Avoid duplicate message in sockect connection
+- [ ] Possibility to watch also not `utf-8` files
 - [ ] Implement spielrs which will be based in [parceljs](https://en.parceljs.org/) but focus in rustwasm projects
 
 ## License

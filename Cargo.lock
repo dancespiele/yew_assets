@@ -1084,9 +1084,9 @@ dependencies = [
 
 [[package]]
 name = "spielrs_diff"
-version = "0.1.0"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f12a2bb6ad7d5c77ef0752612b429ac6d8f63d29120c8d09c62bb60261f84d25"
+checksum = "cf7b29e4826c30ba6bb19a6ce3f4f42e294d70fdeaeb1029e28d073db09b8649"
 dependencies = [
  "async-trait",
  "futures",
