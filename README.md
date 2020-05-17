@@ -50,7 +50,7 @@ ENV_BUILD=production // skiping this variable will build in development mode wit
 EXCLUDING_PATHS="target pkg node_modules static Cargo.lock .vscode" //exclude files or direcotory from the watch. By default target pkg node_modules static Cargo.lock
 ```
 
-**Note**: remember not include `/` in the end of the path. Exclude all the files which are not `utf-8` like images or binaries
+**Note**: remember not include `/` in the end of the path and exclude all the files which are not `utf-8` like images or binaries
 otherwise the watcher will crash
 
 ## About WebSocket
