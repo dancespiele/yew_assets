@@ -800,7 +800,7 @@ dependencies = [
 
 [[package]]
 name = "wasm_warp_template"
-version = "0.14.2"
+version = "0.16.0"
 dependencies = [
  "cfg-if",
  "console_error_panic_hook",
@@ -962,9 +962,9 @@ dependencies = [
 
 [[package]]
 name = "yew_styles"
-version = "0.3.1"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6bf68327943733d5d2a578d2a7748b7cbc908151f707b39ba6ff04b640b455fd"
+checksum = "024a219e28fc516bb0d5c88ed5d67df51cc6e33e99797680bd05982e8e76d042"
 dependencies = [
  "getrandom",
  "rand",

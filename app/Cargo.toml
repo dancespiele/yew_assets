@@ -22,5 +22,5 @@ dotenv = "0.15"
 failure = "0.1"
 yew = { version="0.16", features = ["toml", "yaml", "msgpack", "cbor", "web_sys"]}
 yew-router = { version = "0.13", features = ["web_sys"]}
-yew_styles = { version = "0.3.1"}
+yew_styles = { version = "0.4.0"}
 web-sys = "0.3"
