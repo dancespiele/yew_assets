@@ -962,9 +962,9 @@ dependencies = [
 
 [[package]]
 name = "yew_styles"
-version = "0.5.1"
+version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6b86e035a7b0b4769a9dfe6841a556e00f527f0d9f10758fea1db23fa527ef41"
+checksum = "168ab59efe059af8fb21f59e76f7abfebd74b0441c440fe3a3b7bf04ce83dd05"
 dependencies = [
  "getrandom",
  "rand",
