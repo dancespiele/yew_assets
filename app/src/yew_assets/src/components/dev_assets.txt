@@ -1,1 +1,0 @@
-Database,GitBranch,Feather,Cpu,GitPullRequest,Github,Codesandbox,Server,GitCommit,Figma,Code,Gitlab,Droplet,Trello,Codepen,Terminal,GitMerge,Framer,Command

@@ -1,1 +1,0 @@
-Square,Briefcase,Box,Anchor,Paperclip,Triangle,Gift,Truck,PenTool,Book,Hexagon,Coffee,Disc,LifeBuoy,Key,Package,Globe,Octagon,Circle

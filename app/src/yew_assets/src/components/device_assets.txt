@@ -1,1 +1,0 @@
-HardDrive,Tv,CameraOff,BatteryCharging,Battery,Monitor,Printer,Cast,Tablet,Speaker,Camera,Watch,Smartphone

@@ -1,1 +1,0 @@
-FileMinus,Image,FileText,FilePlus,File,FolderMinus,FolderPlus,Folder

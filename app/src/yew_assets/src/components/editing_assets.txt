@@ -1,1 +1,0 @@
-XCircle,Crop,Type,Minimize2,CheckCircle,ZapOff,Trash2,MinusSquare,AlignRight,Bold,X,Italic,XSquare,Underline,PlusSquare,Minus,Scissors,ZoomIn,Edit2,Maximize2,Edit,AlignJustify,List,Delete,ZoomOut,XOctagon,Minimize,Save,AlignLeft,Zap,MinusCircle,CheckSquare,AlignCenter,Move,Copy,Trash,Maximize,Plus,Check,PlusCircle,Edit3

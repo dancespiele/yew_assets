@@ -1,1 +1,0 @@
-ShieldOff,Archive,Activity,Shield,Crosshair,BellOff,EyeOff,Sidebar,MoreVertical,Bell,RefreshCw,Clipboard,Layout,Loader,Grid,ToggleLeft,Sliders,Settings,Eye,Home,Link,LogIn,Menu,RotateCw,Tool,ShoppingCart,ToggleRight,Filter,Lock,Columns,Unlock,Search,ShoppingBag,LogOut,Layers,BookOpen,MoreHorizontal,MousePointer,Shuffle,Bookmark,Tag,Link2,Pocket
