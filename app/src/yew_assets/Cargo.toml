@@ -1,6 +1,6 @@
 [package]
 name = "yew_assets"
-version = "0.0.1"
+version = "0.1.0"
 authors = ["Francisco Jesus Navarro Cortes"]
 edition = "2018"
 license = "MIT/Apache-2.0"
