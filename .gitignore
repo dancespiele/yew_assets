@@ -2,5 +2,6 @@ target
 app/target
 app/node_modules
 app/pkg
+app/yew_assets/target
 .diff
 .vscode

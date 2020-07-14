@@ -1,0 +1,1 @@
+Umbrella,Cloud,CloudLightning,CloudOff,CloudDrizzle,Calendar,Sunrise,Clock,Sunset,CloudRain,CloudSnow,Wind,Moon,Thermometer,Sun

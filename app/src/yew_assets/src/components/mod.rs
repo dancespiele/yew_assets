@@ -1,0 +1,15 @@
+pub mod browser_assets;
+pub mod bussines_assets;
+pub mod comunication_assets;
+pub mod controller_assets;
+pub mod dev_assets;
+pub mod device_assets;
+pub mod editing_assets;
+pub mod env_assets;
+pub mod file_assets;
+pub mod info_assets;
+pub mod multimedia_assets;
+pub mod nav_assets;
+pub mod object_assets;
+pub mod social_assets;
+pub mod ux_assets;
