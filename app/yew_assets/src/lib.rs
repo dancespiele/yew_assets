@@ -1,5 +1,5 @@
 //! # Yew Assets
-//! Assets Icon components for yew. The svgs are created by [https://feathericons.com/](feather community) and all of them have the most permissive license (MIT)
+//! Assets Icon components for yew. The svgs are created by [feather community](https://feathericons.com) and all of them have the most permissive license (MIT)
 //!
 //! ## How to use:
 //!
