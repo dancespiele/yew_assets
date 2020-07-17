@@ -1,7 +1,7 @@
 # Yew Assets
 Assets Icon components for yew. The svgs are created by [https://feathericons.com/](feather community) and all of them have the most permissive license (MIT)
 
-## how to use:
+## How to use:
 
 Include in cargo.toml with the features which will be used in the project:
 ```toml

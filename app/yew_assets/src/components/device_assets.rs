@@ -55,7 +55,7 @@ pub struct Props {
     /// Defines the position and dimension of the DeviceIcon
     #[prop_or(("0".to_string(),"0".to_string(),"24".to_string(),"24".to_string()))]
     pub view_box: (String, String, String, String),
-    /// fill the color of the asset
+    /// Fill the color of the asset
     #[prop_or("none".to_string())]
     pub fill: String,
     /// General property to add custom class styles
