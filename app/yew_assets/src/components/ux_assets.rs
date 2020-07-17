@@ -12,7 +12,7 @@ pub enum Msg {}
 /// ## Example
 /// ```rust
 /// use yew::prelude::*;
-/// use yew_assets::{UxAssetss, UxIcon};
+/// use yew_assets::{UxAssets, UxIcon};
 ///
 /// pub struct App;
 

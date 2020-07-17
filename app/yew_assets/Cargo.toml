@@ -1,11 +1,13 @@
 [package]
 name = "yew_assets"
 version = "0.1.0"
-authors = ["Francisco Jesus Navarro Cortes"]
+authors = ["Francisco Jesus Navarro Cortes <spieljs@gmail.com>"]
 edition = "2018"
 license = "MIT/Apache-2.0"
-description = "Assets Icon for yew"
+description = "Assets Icon components for yew"
 documentation = "https://docs.rs/crate/yew_assets"
+repository = "https://github.com/spielrs/yew_assets"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

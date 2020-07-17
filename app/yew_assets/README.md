@@ -1,7 +1,7 @@
 # Yew Assets
 Assets Icon components for yew. The svgs are created by [https://feathericons.com/](feather community) and all of them have the most permissive license (MIT)
 
-## How to use:
+## how to use:
 
 Include in cargo.toml with the features which will be used in the project:
 ```toml
@@ -56,5 +56,3 @@ impl Component for App {
 For a new svg icon please open a PR in [feather github repository](https://github.com/feathericons/feather) and after it is approved for them, create a new issue
 in this repository then soon the component will be generated.
 For fixes please open directly a pull request.
-
-Yew Style is [MIT](LICENSE-MIT.md) and [Apache-2.0](LICENSE-APACHE.md) licensed
