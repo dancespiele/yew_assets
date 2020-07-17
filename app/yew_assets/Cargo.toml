@@ -8,6 +8,7 @@ description = "Assets Icon components for yew"
 documentation = "https://docs.rs/crate/yew_assets"
 repository = "https://github.com/spielrs/yew_assets"
 readme = "README.md"
+categories = ["wasm", "graphics", "web-programming", "web-programming::http-client"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

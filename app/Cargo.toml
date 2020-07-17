@@ -1,12 +1,12 @@
 [package]
 authors = ["Francisco Jesus Navarro Cortes"]
-categories = ["wasm"]
-description = "My awesome Yew with Yew-Router and Parcel application!"
-license = "MIT"
-name = "yew_assets"
+categories = ["wasm", "graphics", "web-programming", "web-programming::http-client"]
+description = "Assets Icon components for yew"
+license = "MIT/Apache-2.0"
+name = "yew_assets_page"
 readme = "./README.md"
-repository = "https://github.com/spielrs/wasm_warp_template.git"
-version = "0.16.0"
+repository = "https://github.com/spielrs/yew_assets"
+version = "0.1.0"
 
 [lib]
 crate-type = ["cdylib"]
