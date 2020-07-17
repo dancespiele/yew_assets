@@ -2,17 +2,16 @@
 
 #[macro_use]
 extern crate cfg_if;
-
 extern crate wasm_bindgen;
-extern crate web_sys;
+
 extern crate yew;
-extern crate yew_router;
+extern crate yew_assets;
+extern crate yew_prism;
 extern crate yew_styles;
 
 use wasm_bindgen::prelude::*;
 
 mod app;
-mod pages;
 use app::App;
 
 cfg_if! {

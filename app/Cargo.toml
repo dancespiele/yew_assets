@@ -3,7 +3,7 @@ authors = ["Francisco Jesus Navarro Cortes"]
 categories = ["wasm"]
 description = "My awesome Yew with Yew-Router and Parcel application!"
 license = "MIT"
-name = "wasm_warp_template"
+name = "yew_assets"
 readme = "./README.md"
 repository = "https://github.com/spielrs/wasm_warp_template.git"
 version = "0.16.0"
@@ -21,6 +21,6 @@ serde_derive = "1.0"
 dotenv = "0.15"
 failure = "0.1"
 yew = { version="0.17", features = ["toml", "yaml", "msgpack", "cbor", "web_sys"]}
-yew-router = { version = "0.14", features = ["web_sys"]}
-yew_styles = { version = "0.6", features = ["layouts", "navbar", "asset"]}
-web-sys = "0.3"
+yew_styles = { version= "0.6", features=["layouts", "asset"]}
+yew_assets = { path = "./yew_assets", features=["browser_assets", "business_assets", "communication_assets", "controller_assets", "dev_assets", "device_assets", "editing_assets", "env_assets", "file_assets", "info_assets", "multimedia_assets", "nav_assets", "object_assets", "social_assets", "ux_assets"]}
+yew_prism = "0.4"

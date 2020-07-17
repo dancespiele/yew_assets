@@ -5,6 +5,42 @@ pub enum Msg {}
 /// # BrowserAssets
 ///
 /// Add a svg BrowserIcon
+///
+/// ## Feature
+/// browser_assets
+///
+/// ## Example
+/// ```rust
+/// use yew::prelude::*;
+/// use yew_assets::{BrowserAssetss, BrowserIcon};
+///
+/// pub struct App;
+
+/// impl Component for App {
+///     type Message = ();
+///     type Properties = ();
+///
+///     fn create(_: Self::Properties, _: ComponentLink<Self>) -> Self {
+///         App {}
+///     }
+///
+///     fn update(&mut self, _: Self::Message) -> ShouldRender {
+///         false
+///     }
+///
+///     fn change(&mut self, _: Self::Properties) -> ShouldRender {
+///         false
+///     }
+///
+///     fn view(&self) -> Html {
+///         <BrowserAssets
+///             icon = BrowserIcon::Compass
+///             fill = "#fff"
+///             size = ("30".to_string(),"30".to_string())
+///         />
+///     }
+/// }
+/// ```
 pub struct BrowserAssets {
     pub props: Props,
 }

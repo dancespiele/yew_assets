@@ -1374,20 +1374,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cccddf32554fecc6acb585f82a32a72e28b48f8c4c1883ddfeeeaa96f7d8e519"
 
 [[package]]
-name = "wasm_warp_template"
-version = "0.2.0"
-dependencies = [
- "dotenv",
- "futures",
- "hyper",
- "log 0.4.8",
- "pretty_env_logger",
- "spielrs_diff",
- "tokio",
- "warp",
-]
-
-[[package]]
 name = "winapi"
 version = "0.2.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1438,4 +1424,18 @@ checksum = "d59cefebd0c892fa2dd6de581e937301d8552cb44489cdff035c6187cb63fa5e"
 dependencies = [
  "winapi 0.2.8",
  "winapi-build",
+]
+
+[[package]]
+name = "yew_assets"
+version = "0.2.0"
+dependencies = [
+ "dotenv",
+ "futures",
+ "hyper",
+ "log 0.4.8",
+ "pretty_env_logger",
+ "spielrs_diff",
+ "tokio",
+ "warp",
 ]

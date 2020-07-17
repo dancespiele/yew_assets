@@ -5,6 +5,42 @@ pub enum Msg {}
 /// # ControllerAssets
 ///
 /// Add a svg ControllerIcon
+///
+/// ## Feature
+/// controller_assets
+///
+/// ## Example
+/// ```rust
+/// use yew::prelude::*;
+/// use yew_assets::{ControllerAssetss, ControllerIcon};
+///
+/// pub struct App;
+
+/// impl Component for App {
+///     type Message = ();
+///     type Properties = ();
+///
+///     fn create(_: Self::Properties, _: ComponentLink<Self>) -> Self {
+///         App {}
+///     }
+///
+///     fn update(&mut self, _: Self::Message) -> ShouldRender {
+///         false
+///     }
+///
+///     fn change(&mut self, _: Self::Properties) -> ShouldRender {
+///         false
+///     }
+///
+///     fn view(&self) -> Html {
+///         <ControllerAssets
+///             icon = ControllerIcon::ArrowRightCircle
+///             fill = "#fff"
+///             size = ("30".to_string(),"30".to_string())
+///         />
+///     }
+/// }
+/// ```
 pub struct ControllerAssets {
     pub props: Props,
 }
@@ -185,7 +221,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                     }
                 }
             
@@ -202,7 +238,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-left-down"><polyline points="14 15 9 20 4 15"></polyline><path d="M20 4h-7a4 4 0 0 0-4 4v12"></path></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="14 15 9 20 4 15"></polyline><path d="M20 4h-7a4 4 0 0 0-4 4v12"></path></svg>
                     }
                 }
             
@@ -219,7 +255,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     }
                 }
             
@@ -236,7 +272,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pause-circle"><circle cx="12" cy="12" r="10"></circle><line x1="10" y1="15" x2="10" y2="9"></line><line x1="14" y1="15" x2="14" y2="9"></line></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><circle cx="12" cy="12" r="10"></circle><line x1="10" y1="15" x2="10" y2="9"></line><line x1="14" y1="15" x2="14" y2="9"></line></svg>
                     }
                 }
             
@@ -253,7 +289,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                     }
                 }
             
@@ -270,7 +306,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="6 9 12 15 18 9"></polyline></svg>
                     }
                 }
             
@@ -287,7 +323,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-stop-circle"><circle cx="12" cy="12" r="10"></circle><rect x="9" y="9" width="6" height="6"></rect></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><circle cx="12" cy="12" r="10"></circle><rect x="9" y="9" width="6" height="6"></rect></svg>
                     }
                 }
             
@@ -304,7 +340,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
                     }
                 }
             
@@ -321,7 +357,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg>
                     }
                 }
             
@@ -338,7 +374,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-ccw"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
                     }
                 }
             
@@ -372,7 +408,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-left"><polyline points="9 10 4 15 9 20"></polyline><path d="M20 4v7a4 4 0 0 1-4 4H4"></path></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="9 10 4 15 9 20"></polyline><path d="M20 4v7a4 4 0 0 1-4 4H4"></path></svg>
                     }
                 }
             
@@ -389,7 +425,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-right-down"><polyline points="10 15 15 20 20 15"></polyline><path d="M4 4h7a4 4 0 0 1 4 4v12"></path></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="10 15 15 20 20 15"></polyline><path d="M4 4h7a4 4 0 0 1 4 4v12"></path></svg>
                     }
                 }
             
@@ -406,7 +442,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-ccw"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>
                     }
                 }
             
@@ -423,7 +459,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-right"><polyline points="15 10 20 15 15 20"></polyline><path d="M4 4v7a4 4 0 0 0 4 4h12"></path></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="15 10 20 15 15 20"></polyline><path d="M4 4v7a4 4 0 0 0 4 4h12"></path></svg>
                     }
                 }
             
@@ -440,7 +476,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 8 8 12 12 16"></polyline><line x1="16" y1="12" x2="8" y2="12"></line></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><circle cx="12" cy="12" r="10"></circle><polyline points="12 8 8 12 12 16"></polyline><line x1="16" y1="12" x2="8" y2="12"></line></svg>
                     }
                 }
             
@@ -457,7 +493,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mic-off"><line x1="1" y1="1" x2="23" y2="23"></line><path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path><path d="M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><line x1="1" y1="1" x2="23" y2="23"></line><path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path><path d="M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
                     }
                 }
             
@@ -474,7 +510,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-left"><line x1="17" y1="17" x2="7" y2="7"></line><polyline points="7 17 7 7 17 7"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><line x1="17" y1="17" x2="7" y2="7"></line><polyline points="7 17 7 7 17 7"></polyline></svg>
                     }
                 }
             
@@ -491,7 +527,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-left"><line x1="17" y1="7" x2="7" y2="17"></line><polyline points="17 17 7 17 7 7"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><line x1="17" y1="7" x2="7" y2="17"></line><polyline points="17 17 7 17 7 7"></polyline></svg>
                     }
                 }
             
@@ -508,7 +544,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
                     }
                 }
             
@@ -525,7 +561,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="9 18 15 12 9 6"></polyline></svg>
                     }
                 }
             
@@ -542,7 +578,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-down"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
                     }
                 }
             
@@ -576,7 +612,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-skip-forward"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
                     }
                 }
             
@@ -627,7 +663,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-1"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
                     }
                 }
             
@@ -644,7 +680,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-left"><polyline points="9 14 4 9 9 4"></polyline><path d="M20 20v-7a4 4 0 0 0-4-4H4"></path></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="9 14 4 9 9 4"></polyline><path d="M20 20v-7a4 4 0 0 0-4-4H4"></path></svg>
                     }
                 }
             
@@ -661,7 +697,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="18 15 12 9 6 15"></polyline></svg>
                     }
                 }
             
@@ -678,7 +714,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-right-up"><polyline points="10 9 15 4 20 9"></polyline><path d="M4 20h7a4 4 0 0 0 4-4V4"></path></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="10 9 15 4 20 9"></polyline><path d="M4 20h7a4 4 0 0 0 4-4V4"></path></svg>
                     }
                 }
             
@@ -695,7 +731,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-right"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>
                     }
                 }
             
@@ -712,7 +748,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-left-up"><polyline points="14 9 9 4 4 9"></polyline><path d="M20 20h-7a4 4 0 0 1-4-4V4"></path></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="14 9 9 4 4 9"></polyline><path d="M20 20h-7a4 4 0 0 1-4-4V4"></path></svg>
                     }
                 }
             
@@ -729,7 +765,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
                     }
                 }
             
@@ -780,7 +816,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
                     }
                 }
             
@@ -797,7 +833,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
                     }
                 }
             
@@ -814,7 +850,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg>
                     }
                 }
             
@@ -831,7 +867,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="15 18 9 12 15 6"></polyline></svg>
                     }
                 }
             
@@ -848,7 +884,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-fast-forward"><polygon points="13 19 22 12 13 5 13 19"></polygon><polygon points="2 19 11 12 2 5 2 19"></polygon></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polygon points="13 19 22 12 13 5 13 19"></polygon><polygon points="2 19 11 12 2 5 2 19"></polygon></svg>
                     }
                 }
             
@@ -882,7 +918,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
                     }
                 }
             
@@ -899,7 +935,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-skip-back"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
                     }
                 }
             
@@ -916,7 +952,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                     }
                 }
             
@@ -933,7 +969,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-right"><polyline points="15 14 20 9 15 4"></polyline><path d="M4 20v-7a4 4 0 0 1 4-4h12"></path></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="15 14 20 9 15 4"></polyline><path d="M4 20v-7a4 4 0 0 1 4-4h12"></path></svg>
                     }
                 }
             
@@ -950,7 +986,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-x"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
                     }
                 }
             
@@ -967,7 +1003,7 @@ ControllerIcon::ChevronsUp => get_chevronsup(size, view_box, fill, class_name, i
                             view_box.1,
                             view_box.2,
                             view_box.3,
-                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+                        ) fill=fill id=id stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=class_name><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
                     }
                 }
             

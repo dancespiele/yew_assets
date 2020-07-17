@@ -1,0 +1,37 @@
+[package]
+name = "yew_assets"
+version = "0.1.0"
+authors = ["Francisco Jesus Navarro Cortes"]
+edition = "2018"
+license = "MIT/Apache-2.0"
+description = "Assets Icon for yew"
+documentation = "https://docs.rs/crate/yew_assets"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package.metadata.docs.rs]
+all-features = true
+default-target = "wasm32-unknown-unknown"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+browser_assets = []
+business_assets = []
+communication_assets = []
+controller_assets = []
+dev_assets = []
+device_assets = []
+editing_assets = []
+env_assets = []
+file_assets = []
+info_assets = []
+multimedia_assets = []
+nav_assets = []
+object_assets = []
+social_assets = []
+ux_assets = []
+
+[dependencies]
+yew = { version="0.17", features = ["web_sys"] }

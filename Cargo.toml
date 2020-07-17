@@ -1,5 +1,5 @@
 [package]
-name = "wasm_warp_template"
+name = "yew_assets"
 version = "0.2.0"
 authors = ["Francisco Jesus Navarro Cortes"]
 edition = "2018"

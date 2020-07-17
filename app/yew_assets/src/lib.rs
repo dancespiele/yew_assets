@@ -1,0 +1,33 @@
+#![recursion_limit = "512"]
+mod components;
+
+#[cfg(feature = "browser_assets")]
+pub use components::browser_assets;
+#[cfg(feature = "business_assets")]
+pub use components::business_assets;
+#[cfg(feature = "communication_assets")]
+pub use components::communication_assets;
+#[cfg(feature = "controller_assets")]
+pub use components::controller_assets;
+#[cfg(feature = "dev_assets")]
+pub use components::dev_assets;
+#[cfg(feature = "device_assets")]
+pub use components::device_assets;
+#[cfg(feature = "editing_assets")]
+pub use components::editing_assets;
+#[cfg(feature = "env_assets")]
+pub use components::env_assets;
+#[cfg(feature = "file_assets")]
+pub use components::file_assets;
+#[cfg(feature = "info_assets")]
+pub use components::info_assets;
+#[cfg(feature = "multimedia_assets")]
+pub use components::multimedia_assets;
+#[cfg(feature = "nav_assets")]
+pub use components::nav_assets;
+#[cfg(feature = "object_assets")]
+pub use components::object_assets;
+#[cfg(feature = "social_assets")]
+pub use components::social_assets;
+#[cfg(feature = "ux_assets")]
+pub use components::ux_assets;
