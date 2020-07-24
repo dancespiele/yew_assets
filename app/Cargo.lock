@@ -834,7 +834,16 @@ dependencies = [
 
 [[package]]
 name = "yew_assets"
-version = "0.16.0"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "92b8570da62d014f4f54ffb9c666c97cc14740c4e1b6d13ff5cf866a9aec1490"
+dependencies = [
+ "yew",
+]
+
+[[package]]
+name = "yew_assets_page"
+version = "0.1.0"
 dependencies = [
  "cfg-if",
  "console_error_panic_hook",
@@ -863,9 +872,9 @@ dependencies = [
 
 [[package]]
 name = "yew_styles"
-version = "0.6.2"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c8e265f79b7b984587c7f99513e12a00a3890223604c88d87d71c1c2fdf425b1"
+checksum = "2c9725b270a5a62a4c65cde41be51f2dc0e735bda4190d7f5adfb248b0379c73"
 dependencies = [
  "getrandom",
  "rand",
@@ -873,4 +882,5 @@ dependencies = [
  "wasm-bindgen-test",
  "web-sys",
  "yew",
+ "yew_assets 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]

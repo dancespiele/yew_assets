@@ -57,4 +57,7 @@ For a new svg icon please open a PR in [feather github repository](https://githu
 in this repository then soon the component will be generated.
 For fixes please open directly a pull request.
 
+## Do you like Yew Assets?
+If you like Yew Assets, help us supporting the project with [Github Sponsors](https://github.com/sponsors/dancespiele)!
+
 Yew Style is [MIT](LICENSE-MIT.md) and [Apache-2.0](LICENSE-APACHE.md) licensed
