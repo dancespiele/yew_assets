@@ -62,7 +62,7 @@ in this repository then soon the component will be generated.
 For fixes please open directly a pull request.
 
 ## Do you like Yew Assets?
-If you like Yew Styles, help us supporting the project:
+If you like Yew Assets, help us supporting the project:
 - [Gitcoin](https://gitcoin.co/grants/1472/yew-assets)
 - [Github Sponsors](https://github.com/sponsors/dancespiele)
 - [Paypal](https://paypal.me/dancespiele?locale.x=en_US)
