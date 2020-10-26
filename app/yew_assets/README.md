@@ -5,7 +5,7 @@ Assets Icon components for yew. The svgs are created by [feather community](http
 
 Include in cargo.toml with the features which will be used in the project:
 ```toml
-yew_assets = {version="0.1", features=["ux_assets", "editing_assets", "social_assets"]}
+yew_assets = {version="0.1", features=["full"]}
 ```
 
 ### Features
@@ -52,7 +52,19 @@ impl Component for App {
 `RUST_LOG=yew_assets cargo=trace cargo run`
 3. Open the browser in [http://127.0.0.1:8080](http://127.0.0.1:8080)
 
+## Live documentation
+
+[https://yewstyles.spielrs.tech/assets](https://yewstyles.spielrs.tech/assets)
+
 ## How to contributed
 For a new svg icon please open a PR in [feather github repository](https://github.com/feathericons/feather) and after it is approved for them, create a new issue
 in this repository then soon the component will be generated.
 For fixes please open directly a pull request.
+
+## Do you like Yew Assets?
+If you like Yew Styles, help us supporting the project:
+- [Gitcoin](https://gitcoin.co/grants/1472/yew-assets)
+- [Github Sponsors](https://github.com/sponsors/dancespiele)
+- [Paypal](https://paypal.me/dancespiele?locale.x=en_US)
+
+Yew Assets is [MIT](LICENSE-MIT.md) and [Apache-2.0](LICENSE-APACHE.md) licensed

@@ -5,7 +5,7 @@ Assets Icon components for yew. The svgs are created by [feather community](http
 
 Include in cargo.toml with the features which will be used in the project:
 ```toml
-yew_assets = {version="0.1", features=["ux_assets", "editing_assets", "social_assets"]}
+yew_assets = {version="0.1", features=["full"]}
 ```
 
 ### Features
@@ -62,10 +62,9 @@ in this repository then soon the component will be generated.
 For fixes please open directly a pull request.
 
 ## Do you like Yew Assets?
-## Do you like Yew Styles?
 If you like Yew Styles, help us supporting the project:
 - [Gitcoin](https://gitcoin.co/grants/1472/yew-assets)
 - [Github Sponsors](https://github.com/sponsors/dancespiele)
 - [Paypal](https://paypal.me/dancespiele?locale.x=en_US)
 
-Yew Style is [MIT](LICENSE-MIT.md) and [Apache-2.0](LICENSE-APACHE.md) licensed
+Yew Assets is [MIT](LICENSE-MIT.md) and [Apache-2.0](LICENSE-APACHE.md) licensed

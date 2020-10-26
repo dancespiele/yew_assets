@@ -5,7 +5,7 @@
 //!
 //! Include in cargo.toml with the features which will be used in the project:
 //! ```toml
-//! yew_assets = {version="0.1", features=["ux_assets", "editing_assets", "social_assets"]}
+//! yew_assets = {version="0.1", features=["full"]}
 //! ```
 //!
 //! ### Features
@@ -51,6 +51,10 @@
 //! 2. Run the project:
 //! `RUST_LOG=yew_assets cargo=trace cargo run`
 //! 3. Open the browser in [http://127.0.0.1:8080](http://127.0.0.1:8080)
+//!
+//! ## Live documentation
+//!
+//! [https://yewstyles.spielrs.tech/assets](https://yewstyles.spielrs.tech/assets)
 //!
 //! ## How to contributed
 //! For a new svg icon please open a PR in [feather github repository](https://github.com/feathericons/feather) and after it is approved for them, create a new issue
