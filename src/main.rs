@@ -18,13 +18,14 @@ use tokio::fs;
 use tokio::io::{AsyncBufReadExt, BufReader};
 use tokio::process::Command;
 use tokio::sync::mpsc;
-use tokio::time::delay_for;
+use tokio::time::sleep;
+use tokio_stream::wrappers::UnboundedReceiverStream;
 use warp::{
     ws::{Message, WebSocket},
     Error, Filter,
 };
 
-#[tokio::main(core_threads = 2)]
+#[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     pretty_env_logger::init();
     dotenv().ok();
@@ -142,6 +143,7 @@ async fn connect(ws: WebSocket) {
     browser_ws_tx.send(Message::text("reload")).await.unwrap();
 
     let (tx, rx) = mpsc::unbounded_channel();
+    let rx = UnboundedReceiverStream::new(rx);
 
     tokio::task::spawn(rx.forward(browser_ws_tx).map(|result| {
         if let Err(e) = result {
@@ -217,6 +219,6 @@ async fn watch(tx: mpsc::UnboundedSender<Result<Message, Error>>) {
 
             fut.await.unwrap();
         }
-        delay_for(Duration::from_millis(1000)).await;
+        sleep(Duration::from_millis(1000)).await;
     }
 }

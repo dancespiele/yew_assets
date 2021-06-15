@@ -1,6 +1,6 @@
 [package]
 name = "yew_assets"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Francisco Jesus Navarro Cortes"]
 edition = "2018"
 license = "MIT/Apache-2.0"
@@ -8,11 +8,12 @@ license = "MIT/Apache-2.0"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-tokio = { version = "0.2", features = ["macros", "stream", "process", "rt-threaded","sync", "tcp", "fs", "dns"] }
-warp = "0.2"
+tokio = { version = "1.6", features = ["full"] }
+tokio-stream= "0.1.6"
+warp = "0.3"
 log = "0.4"
 pretty_env_logger = "0.4"
-hyper="0.13"
+hyper="0.14"
 futures="0.3"
 spielrs_diff = "0.2"
 dotenv = "0.15"
