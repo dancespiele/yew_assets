@@ -152,7 +152,7 @@ fn get_browser_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <BrowserAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{browser_names[index]}</div>
                 </Item>
@@ -196,7 +196,7 @@ fn get_business_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <BusinessAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{business_names[index]}</div>
                 </Item>
@@ -270,7 +270,7 @@ fn get_communication_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <CommunicationAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{communication_names[index]}</div>
                 </Item>
@@ -388,7 +388,7 @@ fn get_controller_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <ControllerAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{controller_names[index]}</div>
                 </Item>
@@ -450,7 +450,7 @@ fn get_dev_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <DevAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{dev_names[index]}</div>
                 </Item>
@@ -500,7 +500,7 @@ fn get_device_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <DeviceAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{device_names[index]}</div>
                 </Item>
@@ -606,7 +606,7 @@ fn get_editing_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <EditingAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{editing_names[index]}</div>
                 </Item>
@@ -660,7 +660,7 @@ fn get_env_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <EnvAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{env_names[index]}</div>
                 </Item>
@@ -700,7 +700,7 @@ fn get_file_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <FileAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{file_names[index]}</div>
                 </Item>
@@ -736,7 +736,7 @@ fn get_info_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <InfoAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{info_names[index]}</div>
                 </Item>
@@ -776,7 +776,7 @@ fn get_multimedia_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <MultimediaAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{multimedia_names[index]}</div>
                 </Item>
@@ -830,7 +830,7 @@ fn get_nav_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <NavAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{nav_names[index]}</div>
                 </Item>
@@ -892,7 +892,7 @@ fn get_object_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <ObjectAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{object_names[index]}</div>
                 </Item>
@@ -938,7 +938,7 @@ fn get_social_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <SocialAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{social_names[index]}</div>
                 </Item>
@@ -1048,7 +1048,7 @@ fn get_ux_assets() -> Html {
             html! {
                 <Item layouts=vec![ItemLayout::ItXs(3), ItemLayout::ItM(2), ItemLayout::ItL(1)]>
                     <UxAssets
-                        icon = icon
+                        icon = icon.clone()
                     />
                     <div>{ux_names[index]}</div>
                 </Item>

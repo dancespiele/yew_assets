@@ -21,6 +21,6 @@ serde_derive = "1.0"
 dotenv = "0.15"
 failure = "0.1"
 yew = { version="0.18", features = ["toml", "yaml", "msgpack", "cbor", "web_sys"]}
-yew_styles = { version= "0.9", features=["layouts"]}
+yew_styles = { version= "0.9.1", features=["layouts"]}
 yew_assets = { path = "./yew_assets", features=["full"]}
-yew_prism = "0.4"
+yew_prism = "0.4.2"
